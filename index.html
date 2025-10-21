@@ -8,23 +8,44 @@
 <link rel="manifest" href="manifest.json"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <style>
-:root{--blue:#1A2E55;--red:#D60000;--grey:#666}
-html,body{margin:0;background:#f7f7f9;font:16px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--blue)}
-.card{max-width:540px;margin:28px auto;background:#fff;border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.08);padding:24px 22px 26px}
-.logo{display:flex;justify-content:center;margin-bottom:8px}
-.logo img{width:300px;max-width:90%;height:auto}
-.name{font-size:26px;font-weight:800;letter-spacing:.2px}
-.role{color:var(--grey);margin-top:2px;margin-bottom:14px;font-size:15px}
-.row{display:flex;gap:12px;align-items:flex-start;color:#0f172a}
-.lab{color:var(--grey);width:92px;font-size:13px}
-.value{font-size:15px}
-.value a{color:var(--blue);text-decoration:none}
-.sep{height:2px;background:#D60000;width:140px;margin:14px 0 18px}
-.btn{display:inline-block;background:#1A2E55;color:#fff;padding:12px 14px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none}
-.qr{display:flex;justify-content:center;margin-top:18px}
-.qr img{width:180px;height:180px}
-.qr-caption{text-align:center;color:#777;font-size:12px;margin-top:6px}
-footer{text-align:center;font-size:12px;color:#666;margin-top:10px}
+:root { --blue:#1A2E55; --red:#D60000; --grey:#666; }
+html,body {
+  margin:0;
+  background:#f7f7f9;
+  font:16px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--blue);
+}
+.card {
+  max-width:540px;
+  margin:28px auto;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+  padding:24px 22px 26px;
+}
+.logo { display:flex; justify-content:center; margin-bottom:8px; }
+.logo img { width:300px; max-width:90%; height:auto; }
+.name { font-size:26px; font-weight:800; letter-spacing:.2px; }
+.role { color:var(--grey); margin-top:2px; margin-bottom:14px; font-size:15px; }
+.row { display:flex; gap:12px; align-items:flex-start; color:#0f172a; }
+.lab { color:var(--grey); width:92px; font-size:13px; }
+.value { font-size:15px; }
+.value a { color:var(--blue); text-decoration:none; }
+.sep { height:2px; background:var(--red); width:140px; margin:14px 0 18px; }
+.btn {
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:12px 14px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:15px;
+  text-decoration:none;
+}
+.qr { display:flex; justify-content:center; margin-top:18px; }
+.qr img { width:180px; height:180px; }
+.qr-caption { text-align:center; color:#777; font-size:12px; margin-top:6px; }
+footer { text-align:center; font-size:12px; color:#666; margin-top:10px; }
 </style>
 </head>
 <body>
@@ -36,16 +57,31 @@ footer{text-align:center;font-size:12px;color:#666;margin-top:10px}
     <div class="name">Alessandro Meloni</div>
     <div class="role">Managing Director · Melapack s.r.o.</div>
 
-    <div class="row"><div class="lab">Email</div><div class="value"><a href="mailto:alessandro@melapack.com">alessandro@melapack.com</a></div></div>
-    <div class="row"><div class="lab">Mobile</div><div class="value"><a href="tel:+36306526795">+36 30 652 6795</a></div></div>
-    <div class="row"><div class="lab">Website</div><div class="value"><a href="https://melapack.com" target="_blank">melapack.com</a></div></div>
-    <div class="row"><div class="lab">Address</div><div class="value">Revoluční 1082/8, Nové Město · 110 00 Praha 1 · Czech Republic</div></div>
+    <div class="row">
+      <div class="lab">Email</div>
+      <div class="value"><a href="mailto:alessandro@melapack.com">alessandro@melapack.com</a></div>
+    </div>
+    <div class="row">
+      <div class="lab">Mobile</div>
+      <div class="value"><a href="tel:+36306526795">+36 30 652 6795</a></div>
+    </div>
+    <div class="row">
+      <div class="lab">Website</div>
+      <div class="value"><a href="https://melapack.com" target="_blank">melapack.com</a></div>
+    </div>
+    <div class="row">
+      <div class="lab">Address</div>
+      <div class="value">Revoluční 1082/8, Nové Město · 110 00 Praha 1 · Czech Republic</div>
+    </div>
 
     <div class="sep"></div>
 
-    <a class="btn" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AAlessandro%20Meloni%0AORG%3AMelapack%20s.r.o.%0ATITLE%3AManaging%20Director%0ATEL%3BTYPE%3DCELL%3A%2B36%2030%206526795%0AEMAIL%3BTYPE%3DWORK%3Aalessandro%40melapack.com%0AADR%3BTYPE%3DWORK%3A%3B%3BRevolu%C4%8Dn%C3%AD%201082/8%2C%20Nov%C3%A9%20M%C4%9Bsto%3BPraha%3BPraha%201%3B11000%3BCzech%20Republic%0AURL%3Ahttps%3A//melapack.com%0AEND%3AVCARD%0A">Save Contact</a>
+    <!-- 🔹 vCard corretta con nome e cognome -->
+    <a class="btn" href='data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMeloni%3BAlessandro%3B%3B%3B%0AFN%3AAlessandro%20Meloni%0AORG%3AMelapack%20s.r.o.%0ATITLE%3AManaging%20Director%0ATEL%3BTYPE%3DCELL%3A%2B36%2030%20652%206795%0AEMAIL%3BTYPE%3AWORK%3Aalessandro%40melapack.com%0AADR%3BTYPE%3AWORK%3A%3B%3BRevolu%C4%8Dn%C3%AD%201082%2F8%2C%20Nov%C3%A9%20M%C4%9Bsto%3BPraha%3BPraha%201%3B11000%3ACzech%20Republic%0AURL%3Ahttps%3A%2F%2Fmelapack.com%0AEND%3AVCARD'>Save Contact</a>
 
-    <div class="qr"><img src="qr.png" alt="QR to this card"/></div>
+    <div class="qr">
+      <img src="qr.png" alt="QR to this card"/>
+    </div>
     <div class="qr-caption">Scan to view this card online</div>
 
     <footer>Open in Safari and use “Add to Home Screen”.</footer>
